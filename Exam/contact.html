@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Touché Café</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .contact-container {
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    h1, h3 {
+      color: #fff;
+    }
+
+    .form-label {
+      font-weight: 600;
+    }
+
+    .btn-dark {
+      background-color: #000;
+      border: none;
+    }
+
+    .btn-dark:hover {
+      background-color: #333;
+    }
+
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    iframe {
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Touché</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/coffieshop.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="/menu.html">MENU</a></li>        
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/gallery.html">GALLERY</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about.html">ABOUT US</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact.html">CONTACT</a></li>
+            <li class="nav-item"><a class="nav-link" href="/register.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill-add" viewBox="2 2 16 16">
+            <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path d="M2 13c0 1 1 1 1 1h5.256A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1 1.544-3.393Q8.844 9.002 8 9c-5 0-6 3-6 4"/>
+            </svg></a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="overlay">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">Get in Touch with Touché Café</h1>
+      <p class="lead text-light">We'd love to hear from you!</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Form -->
+      <div class="col-lg-6">
+        <div class="contact-container">
+          <h3 class="mb-4 text-dark">Send a Message</h3>
+          <form onsubmit="return validateForm();">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Type your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-6">
+        <div class="contact-container">
+          <h3 class="mb-4">Our Location</h3>
+          <p><strong>Touché Café</strong></p>
+          <p>1234 Dining Str., Los Angeles, CA 12345-0000, America</p>
+          <p>Email: <a href="mailto:hello@touchecafe.in">hello@touchecafe.in</a></p>
+          <p>Phone: +91 98765 43210</p>
+
+          <!-- Google Map -->
+          <div class="map border rounded shadow-sm">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.406111324582!2d78.48795531428889!3d10.759219062394975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf50c5c09a1b3%3A0x3f55ad353a755e6d!2sCafe%20Example!5e0!3m2!1sen!2sin!4v1650000000000" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Touché Café. All rights reserved.</p>
+</footer>
+
+<!-- Basic Validation -->
+<script>
+  function validateForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (name === '' || email === '' || message === '') {
+      alert("Please fill out all fields.");
+      return false;
+    }
+    return true;
+  }
+</script>
+
+</body>
+</html>
